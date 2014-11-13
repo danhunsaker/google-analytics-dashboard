@@ -60,7 +60,7 @@ class GADAdminOptions {
 	}
 
 	function admin_plugin_menu() {
-		add_options_page( __( 'Google Analytics Dashboard Options' ), __( 'Google Analytics Dashboard', 'google-analytics-dashboard' ), 8, __FILE__, array( &$this, 'admin_plugin_options' ) );
+		add_options_page( __( 'Google Analytics Dashboard Options' ), __( 'Google Analytics Dashboard', 'google-analytics-dashboard' ), 'manage_options', __FILE__, array( &$this, 'admin_plugin_options' ) );
 	}
 
 	function admin_plugin_options( $info_message = '' ) {
