@@ -87,7 +87,7 @@ class GADWidgetData {
 		$maxvalue = 0;
 		$count    = 0;
 		foreach ( $data as $date => $value ) {
-			if (array_key_exists('ga:pageviews', $value)) {
+			if (isset($value['ga:pageviews'])) {
 				if ( $minvalue > $value['ga:pageviews'] ) {
 					$minvalue = $value['ga:pageviews'];
 				}
