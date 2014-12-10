@@ -87,14 +87,16 @@ class GADWidgetData {
 		$maxvalue = 0;
 		$count    = 0;
 		foreach ( $data as $date => $value ) {
-			if ( $minvalue > $value['ga:pageviews'] ) {
-				$minvalue = $value['ga:pageviews'];
+			if (array_key_exists('ga:pageviews', $value)) {
+				if ( $minvalue > $value['ga:pageviews'] ) {
+					$minvalue = $value['ga:pageviews'];
+				}
+				if ( $maxvalue < $value['ga:pageviews'] ) {
+					$maxvalue = $value['ga:pageviews'];
+				}
+				$cvals .= $value['ga:pageviews'] . ( $count < sizeof( $data ) - 1 ? "," : "" );
+				$count ++;
 			}
-			if ( $maxvalue < $value['ga:pageviews'] ) {
-				$maxvalue = $value['ga:pageviews'];
-			}
-			$cvals .= $value['ga:pageviews'] . ( $count < sizeof( $data ) - 1 ? "," : "" );
-			$count ++;
 		}
 
 		return '<img width="90" height="30" src="http://chart.apis.google.com/chart?chs=90x30&cht=ls&chf=bg,s,FFFFFF00&chco=0077CC&chd=t:' . $cvals . '&chds=' . $minvalue . ',' . $maxvalue . '"/>';
