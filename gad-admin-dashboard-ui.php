@@ -66,7 +66,7 @@ class GADAdminDashboardUI {
 
 		<div style="padding-bottom: 5px;">
 			<?php echo $this->ga_data->start_date ?> to <?php echo $this->ga_data->end_date ?> <br />
-			<img width="450" height="200" src="<?php echo $this->ga_data->create_google_chart_url( 450, 200 ); ?>" />
+			<img width="380" height="200" src="<?php echo $this->ga_data->create_google_chart_url( 380, 200 ); ?>" />
 		</div>
 
 	<?php

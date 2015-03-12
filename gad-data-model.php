@@ -199,6 +199,6 @@ class GADDataModel {
 	}
 
 	function create_google_chart_url( $width, $height ) {
-		return "http://chart.apis.google.com/chart?chs=" . $width . "x" . $height . "&chf=bg,s,FFFFFF00&cht=lc&chco=0077CC&chd=t:" . $this->chart_values . "&chds=" . ( $this->minvalue - 20 ) . "," . ( $this->maxvalue + 20 ) . "&chxt=x,y&chxl=0:" . $this->x_axis_labels . "&chxr=1," . $this->minvalue . "," . $this->maxvalue . "&chxp=0," . $this->y_axis_labels . "&chm=V,707070,0," . $this->first_monday_index . ":" . $this->total_count . ":7,1|o,0077CC,0,-1.0,6";
+		return "http://chart.apis.google.com/chart?chs=" . $width . "x" . $height . "&chf=bg,s,FFFFFF00&cht=lc&chco=0077CC&chd=t:" . $this->chart_values . "&chds=" . ( $this->minvalue - 20 ) . "," . ( $this->maxvalue + 20 ) . "&chxt=x,y&chxl=0:" . $this->x_axis_labels . "&chxr=1," . ( $this->minvalue - 20 ) . "," . ( $this->maxvalue + 20 ) . "&chxp=0," . $this->y_axis_labels . "&chm=V,707070,0," . $this->first_monday_index . ":" . $this->total_count . ":7,1|o,0077CC,0,-1.0,6";
 	}
 }
